@@ -1,0 +1,477 @@
+@import url('https://fonts.cdnfonts.com/css/spartan');
+@import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: #F6F8FF;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    z-index: 99;
+    transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 800px){
+  nav{
+    padding: 1rem;
+  }
+}
+
+.nav-scrolled{
+  height: 12.5vh;
+  background-color: #6FD0F6;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.nav-scrolled img{
+  width: 12.5vh;
+}
+
+.nav-scrolled .yellow-btn {
+  font-size: 1.15rem;
+}
+
+nav img {
+  width: 15vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.yellow-btn{
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-family: 'Spartan', sans-serif;
+    background-color: #F6D84F;
+    color: #F1FFE7;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 800px){
+  .yellow-btn{
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+main{
+    height: 90vh;
+    background-color: #FF96AE;
+    border-radius: 0 0 15% 15%;
+}
+
+.info-carousel {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    padding: 0 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px){
+  .info-carousel {
+    text-align: center;
+    padding: 1rem 0;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.info-carousel p {
+    color: #F1FFE7;
+    font-family: 'Spartan', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 1024px){
+  .info-carousel p {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .info-carousel p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 420px){
+  .info-carousel p {
+    font-size: 1.5rem;
+  }
+}
+
+.carousel-img {
+  width: 65%;
+}
+
+@media only screen and (max-width: 1024px){
+  .carousel-img {
+    width: 80%;
+  }
+}
+
+  .carousel {
+    position: relative;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-inner::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-item {
+      transition: none;
+    }
+  }
+  
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: block;
+  }
+  
+  .carousel-item-next:not(.carousel-item-start),
+  .active.carousel-item-end {
+    transform: translateX(100%);
+  }
+  
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start {
+    transform: translateX(-100%);
+  }
+
+#see-more {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  color: #6FD0F6;
+}
+
+.item {
+  margin: 0 0 2.5rem 0;
+  height: auto;
+  border-radius: 1rem;
+  border: 0.2rem solid #FF96AE;
+  padding: 1rem;
+  transition: transform 0.25s ease-out;
+}
+
+.item:hover {
+  transform: scale(0.98); 
+}
+
+.item img {
+  height: 25vh;
+  object-fit: contain;
+}
+
+.item .info {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item .info h4 {
+  font-size: 1rem;
+  font-family: 'Spartan', sans-serif;
+}
+
+.item .info p {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Trebouchet MS', sans-serif;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons span{
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 800;
+    font-family: 'Spartan', sans-serif;
+    background-color: #FF96AE;
+    color: #000000;
+    padding: 0.65rem;
+    border-radius: 0.75rem;
+}
+
+ .buttons span:nth-child(1){
+  background-color: #6FD0F6;
+} 
+
+#modal01{
+  display: none;
+  position: fixed; 
+  padding: 5vh 0;
+  z-index: 99; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+#modal02{
+  display: none;
+  position: fixed; 
+  padding: 5vh 0;
+  z-index: 99; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+#modal03{
+  display: none;
+  position: fixed; 
+  padding: 5vh 0;
+  z-index: 99; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+#modal04{
+  display: none;
+  position: fixed; 
+  padding: 5vh 0;
+  z-index: 99; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+#modal05{
+  display: none;
+  position: fixed; 
+  padding: 5vh 0;
+  z-index: 99; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+#modal06{
+  display: none;
+  position: fixed; 
+  padding: 5vh 0;
+  z-index: 99; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F6F8FF;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 40%;
+  animation-name: animation;
+  animation-duration: 0.5s
+} 
+
+@media only screen and (max-width: 1280px){
+  .modal-content {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .modal-content {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .modal-content {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .modal-content {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 360px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.modal-content img {
+  width: 75%;
+}
+
+.modal-info {
+  margin: auto;
+  width: 90%;
+}
+
+.modal-content h1 {
+  text-align: center;
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.35em;
+  color: #000000;
+}
+
+.modal-content p {
+  text-align: center;
+  font-family: 'Trebouchet MS', sans-serif;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+.modal-content span {
+  cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 800;
+    font-family: 'Spartan', sans-serif;
+    background-color: #FF96AE;
+    color: #000000;
+    padding: 0.65rem;
+    border-radius: 0.75rem;
+}
+
+.close-btn {
+  color: #FF96AE;
+  left: 68%;
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1280px) {
+  .close-btn {
+    left: 73%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .close-btn {
+    left: 77%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .close-btn {
+    left: 82%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .close-btn {
+    left: 86%;
+  }
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #1F1300;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animation {
+from {top: 50vh; opacity: 0}
+to {top: 50vh; opacity: 1}
+} 
+
+.swiper {
+  object-fit: cover;
+  width: 100%;
+  height: 50vh;
+}
