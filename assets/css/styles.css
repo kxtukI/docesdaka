@@ -254,6 +254,17 @@ main{
     border-radius: 0.75rem;
 }
 
+.buttons a{
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 800;
+  font-family: 'Spartan', sans-serif;
+  background-color: #FF96AE;
+  color: #000000;
+  padding: 0.65rem;
+  border-radius: 0.75rem;
+}
+
  .buttons span:nth-child(1){
   background-color: #6FD0F6;
 } 
@@ -415,7 +426,7 @@ main{
   color: #000000;
 }
 
-.modal-content span {
+.modal-content a {
   cursor: pointer;
     font-size: 0.9rem;
     font-weight: 800;
